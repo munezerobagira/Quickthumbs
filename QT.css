@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Dancing+Script&family=Exo&family=Fira+Sans:wght@300&family=Lato&family=Lobster&family=Playfair+Display&family=Quicksand&display=swap');
+*{
+  font-family: Lato, sans-serif;
+  
+}
+h1{
+  cursor: pointer;
+  user-select: none;
+  font-size: 4rem;
+}
+.h1{
+  background: #fe6d73;
+
+ 
+  background-color: #fe6d73;
+  background: conic-gradient(
+    #133e83 16.666%, 
+    #94f807 60.666%, 
+    #8B9862 13.333%, 
+    #F18F43 50%, 
+    #8B9862 50%, 
+    #F18F43 35.666%, 
+    #476098 66.666%, 
+    #476098 80.333%, 
+    #417ce1 16.333%,
+    #b716cd 73.333%);
+    
+  background-size: 50%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  text-align: center;
+  animation: rainbow-text-animation-rev 0.5s ease forwards;
+  cursor: pointer;
+}
+.h1:hover {
+  animation: rainbow-text-animation 0.5s ease forwards;
+}
+input[type="text"]{
+  background-color: #222;
+  border-radius: 3px;
+  border: none;
+  padding: 5px;
+  font-weight: bolder;
+  color: white;
+  font-size: 1.2rem;
+  margin: 5px;
+  text-decoration: none;
+}
+.container{
+  display:flex ;
+  align-items: center;
+  flex-direction: row;
+}
+.img, .main{
+  display: inline-block;
+}
+.main{
+  position: relative;
+  top: -20px;
+  margin-left: 5%;
+}
+
+body {
+  background-color: #222;
+ 
+ 
+  color: #ddd;
+  font-family: Lato, sans-serif;
+}
+
+form {
+    
+  background-color: #333;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  }
+
+label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-family: Lato, sans-serif;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+  background-color: #A7489B;
+  color: white;
+  font-size: 1.2em;
+  padding: 8px 12px;
+  border-radius: 4px;
+  width: 100%;
+  border: none;
+  transition: all 0.5s ease;
+  
+}
+input[type="file"]::-webkit-file-upload-button:hover{
+  border: 1px #51234a solid;
+  outline: 1px rgb(255, 255, 255) solid;
+  background-color: #51234a;
+  color: grey;
+}
+input[type="file"]::before {
+  
+  background-color: #323232;
+  color: white;
+  font-size: 1.2em;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+
+button[type="submit"] {
+  background-color: #555;
+  border: none;
+  color: #ddd;
+  cursor: pointer;
+  font-size: 25px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+  font-weight: bolder;
+  
+  font-family:Lobster, sans-serif;
+  background: conic-gradient(
+  
+    #476098 80.333%, 
+    #216bec 16.333%,
+    #A7489B 73.333%);
+    
+  background-size: 50%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  text-align: center;
+  animation: rainbow-text-animation-rev 0.5s ease forwards;
+  cursor: pointer;
+  }
+
+button[type="submit"]:hover {
+  animation: rainbow-text-animation 0.5s ease forwards;
+}
+
+#output-container {
+  background-color: #444;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 600px;
+  padding: 20px;
+  position: relative;
+}
+
+#output-container h2 {
+  margin-top: 0;
+}
+
+#download-button{
+  background-color: #555;
+  border: none;
+  color: #ddd;
+  cursor: pointer;
+  font-size: 25px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+  font-weight: bolder;
+
+  
+  font-family:Lobster, sans-serif;
+  background: conic-gradient(
+    #476098 21.333%,
+    #30914a 80.333%, 
+    #239e89 73.333%);
+    
+  background-size: 50%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  text-align: center;
+  animation: rainbow-text-animation-rev 0.5s ease forwards;
+  cursor: pointer;
+  }
+
+#download-button:hover {
+  animation: rainbow-text-animation 0.5s ease forwards;
+}
+
+
+@keyframes rainbow-text-animation {
+  0% {
+    background-size: 57%;
+    background-position: 0 0;
+  }
+  20% {
+    background-size: 57%;
+    background-position: 0 1em;
+  }
+  100% {
+    background-size: 300%;
+    background-position: -10em 1em;
+  }
+}
+
+@keyframes rainbow-text-animation-rev {
+  0% {
+  background-size: 300%;
+  background-position: -9em 1em;
+  }
+  20% {
+  background-size: 57%;
+  background-position: 0 1em;
+  }
+  100% {
+  background-size: 57%;
+  background-position: 0 0;
+  }
+}
+@media only screen and (max-width:600px){
+  .main{
+    position: relative;
+    top: 0px;
+  }
+  .img, .main{
+    margin: 10px;
+    display:flex;
+    flex-wrap: no-wrap;
+  }
+  
+  .container{
+    display:flex ;
+    align-items: normal;
+    flex-direction: column;
+    width: 60%;
+    align-self: center;
+  }
+  .h1{
+    font-size: 2rem;
+  }
+}
+@media only screen and (min-width:1000x){
+    *{
+      overflow-x: hidden;
+    }
+}
