@@ -40,6 +40,7 @@ async def generate_thumbnail(img, title, subtitle):
     #convert the image back to the pillow to add some text
     img = cv2.cvtColor(upscaled_img, cv2.COLOR_BGR2RGBA)
     final_upscaled_image=Image.fromarray(img, mode='RGBA')
+    final_upscaled_image.convert("RGBA")
     centerpiece_width = int(target_thumbnail_width/ 2)
     print("Center_piece_width", centerpiece_width)
     centerpiece_height = int((target_thumbnail_height / final_upscaled_image.width/2) * centerpiece_width)
@@ -58,8 +59,8 @@ async def generate_thumbnail(img, title, subtitle):
     # Add the linear gradient to the the background
     polygon = [(centerpiece_width, 0), (target_thumbnail_width, 0), (target_thumbnail_width, target_thumbnail_height), (centerpiece_width, target_thumbnail_width), (centerpiece_width, 0)]
     
-    color1 = (255, 0, 0)
-    color2 = (0, 255, 0)
+    color1 = (255, 100, 100)
+    color2 = (100, 255, 0)
     linear_gradient(thumbnail_image,polygon, (int(centerpiece_width), target_thumbnail_height),(int(centerpiece_width*1.5), target_thumbnail_height),color1,color2 )
     alpha_image.convert("RGBA")
     thumbnail_image.paste(alpha_image, (centerpiece_x, centerpiece_y), alpha_image)
