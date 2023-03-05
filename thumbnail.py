@@ -24,16 +24,21 @@ async def generate_thumbnail(img, title, subtitle):
 
     #remove the bg image
     removed_bg_image = remove(input_img)
-
+    removed_bg_image1 = cv2.cvtColor(removed_bg_image, cv2.COLOR_RGBA2RGB)
+    image_height = removed_bg_image1.shape[0]
     
     # upscale the image is required
-
+    resized_img = cv2.resize(removed_bg_image1, (80, 160))
+    path = 'LapSRN_x4.pb'
+    dr.readModel(path)
+    dr.setModel('lapsrn', 4)
+    upscaled_img = dr.upsample(resized_img)
     # now taking the upscaled image and converting to pillow image
     
 
 
     #convert the image back to the pillow to add some text
-    img = cv2.cvtColor(removed_bg_image, cv2.COLOR_BGR2RGBA)
+    img = cv2.cvtColor(upscaled_img, cv2.COLOR_BGR2RGBA)
     final_upscaled_image=Image.fromarray(img, mode='RGBA')
     centerpiece_width = int(target_thumbnail_width/ 2)
     print("Center_piece_width", centerpiece_width)
@@ -80,7 +85,7 @@ async def generate_thumbnail(img, title, subtitle):
         vertical_font_size=int(target_thumbnail_height/len(text_lines))
         print(horizontal_font_size, vertical_font_size)
         font_size=min(vertical_font_size, horizontal_font_size)
-        font = ImageFont.truetype(font_path,size=int(font_size))
+        font = ImageFont.truetype('./MesloLGS NF Bold.ttf',size=int(font_size))
         # Set font and text color
        
         draw.text((text_x, text_y), line, fill=(0, 0, 0), font=font)
