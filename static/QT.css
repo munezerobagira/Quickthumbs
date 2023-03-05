@@ -3,6 +3,8 @@
   font-family: Lato, sans-serif;
   
 }
+
+
 h1{
   cursor: pointer;
   user-select: none;
@@ -14,28 +16,28 @@ h1{
  
   background-color: #fe6d73;
   background: conic-gradient(
-    #133e83 16.666%, 
-    #94f807 60.666%, 
-    #8B9862 13.333%, 
-    #F18F43 50%, 
-    #8B9862 50%, 
-    #F18F43 35.666%, 
+    #476098 16.666%, 
+    #476098 60.666%, 
+   
+    #ffffff 50%, 
+    #ffffff 35.666%, 
     #476098 66.666%, 
     #476098 80.333%, 
-    #417ce1 16.333%,
-    #b716cd 73.333%);
+    #476098 16.333%,
+    #476098 73.333%);
     
-  background-size: 50%;
+  background-size: 57%;
   background-repeat: repeat;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; 
   text-align: center;
   animation: rainbow-text-animation-rev 0.5s ease forwards;
   cursor: pointer;
+  animation-name:rainbow-text-animation-rev, rainbow-text-animation;
+  animation-duration: 3s, 4s;
+  animation-iteration-count: infinite;
 }
-.h1:hover {
-  animation: rainbow-text-animation 0.5s ease forwards;
-}
+
 input[type="text"]{
   background-color: #222;
   border-radius: 3px;
@@ -227,6 +229,7 @@ button[type="submit"]:hover {
   .main{
     position: relative;
     top: 0px;
+    left: 7.5%;
   }
   .img, .main{
     margin: 10px;
@@ -242,10 +245,29 @@ button[type="submit"]:hover {
     align-self: center;
   }
   .h1{
-    font-size: 2rem;
+    font-size: 1.8rem;
+    background: conic-gradient(
+    #476098 16.666%, 
+    #476098 60.666%, 
+   
+    #ffffff 50%, 
+    #ffffff 35.666%, 
+    #476098 66.666%, 
+    #fcfcfc 80.333%, 
+    #476098 16.333%,
+    #ffffff 73.333%);
+    background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-name:rainbow-text-animation-rev, rainbow-text-animation;
+  animation-duration: 14s, 20s;
+  animation-iteration-count: infinite; 
   }
   body{
     overflow-x: hidden;
+  }
+  .img img{
+    width: 85vw;
   }
 }
 @media only screen and (min-width:1000x){
