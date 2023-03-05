@@ -1,3 +1,4 @@
+import numpy as np
 from rembg import remove
 import cv2
 import os
@@ -87,4 +88,7 @@ async def generate_thumbnail(img, title, subtitle):
         
 
     thumbnail_image.save("images_output/image_text.png")
+    open_cv_image=np.array(thumbnail_image)
+    open_cv_image=open_cv_image[:,:,::-1].copy()
+    
     return thumbnail_image
