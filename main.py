@@ -15,7 +15,7 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 def read_root():
     return FileResponse("static/QT.html")
 
-@app.post("/thumbs/")
+@app.post("/process-image/")
 async def create_upload_file( file: UploadFile):
     contents = await file.read()
     nparr = np.fromstring(contents, np.uint8)
