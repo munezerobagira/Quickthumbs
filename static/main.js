@@ -27,7 +27,7 @@ form.addEventListener('submit', async function (event) {
     imageContainer.innerHTML = `<img src="${data.thumnail}" style="width:100%; max-height:400px"/>`;
     downloadLink.setAttribute('href', data.thumnail);
   } else {
-    alert('You need to provide the all data');
+    alert('You need to provide all the required data');
   }
   loader.classList.add('hidden');
 });

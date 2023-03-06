@@ -16,12 +16,11 @@
         <img src="/static/img1.png" />
       </div>
       <div class="main">
-        <div class="loading hidden" id="Loader">
-          loading...
-        </div>
+        
         <div class="form">
           
           <form action="/upload-image" method="post" enctype="multipart/form-data">
+            
             <ul>
               <li>
                 <label for="text"> Enter the most important words of your content</label>
@@ -37,11 +36,18 @@
               Upload
             </button>
           </form>
+          <div class="loading hidden" id="Loader">
+            loading...
+          </div>
           <div id="output-container">
+            
             <h2>Output</h2>
-            <div id="image-container"></div>
+            <div id="image-container">
+              
+            </div>
+            
             <!-- Output will be displayed here -->
-            <button id="download-button"><a class="lni lni-download" id="download-link" href="#"></i> Download</button>
+            <button id="download-button"><a id="download-link" href="#"></a><i class="lni lni-download"></i> Download</button>
           </div>
         </div>
       </div>
